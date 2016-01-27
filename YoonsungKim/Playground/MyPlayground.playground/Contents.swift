@@ -66,14 +66,20 @@ union.count
 let exOR = subway2.exclusiveOr(subway3)
 exOR.count
 
-if transfer.count > 0 {
-    print("Transfer Station is \(transfer)")
+if transfer.count > 4 {
+    print("So many transfer station")
+} else if transfer.count > 0 {
+    print("Transfer station is \(transfer)")
 } else {
     print("There is no transfer station")
 }
 
 for station in subway2 {
     print("This station is \(station)")
+}
+
+for i in 0...3 {
+    print("\(i+1) 번째 회의실은 \(roomNames[i])입니다.")
 }
 
 let nowList:[String:Int] = ["씻기":1,"아침 밥":2,"옷 입기":3,"가방 챙기기":4]
@@ -100,11 +106,64 @@ for (roomName, capacity) in roomCapacity {
     print("\(roomDescription)")
 }
 
-let cheetah:Int = 0
-let robotCheetah:Int = nil
 
-print("I have \(cheetah) cheetah in my house")
-print("I have \(robotCheetah) robot cheetah in my house")
+var year:Int = 2204
+
+
+/* Bool 변수 안 이용
+
+if year % 4 == 0 {
+    if year % 100 == 0 {
+        if year % 400 == 0 {
+            print("\(year)은 윤년입니다.")
+        } else {
+            print("\(year)은 윤년이 아닙니다.")
+        }
+    } else {
+        print("\(year)은 윤년입니다.")
+    }
+} else {
+    print("\(year)은 윤년이 아닙니다.")
+}*/
+
+
+// Bool 변수 이용
+var leapYear:Bool = true
+if year % 4 == 0 {
+    if year % 100 == 0{
+        if year % 400 != 0 {
+            leapYear = false
+        }
+    }
+} else {
+    leapYear = false
+}
+
+if leapYear == true {
+    print("\(year)년은 윤년입니다.")
+} else {
+    print("\(year)년은 윤년이 아닙니다.")
+}
+
+var title : String = "Storyboard Prototyping"
+var ratings : [Int]? = nil
+var supportURL : String? = nil
+
+supportURL = "www.korea.ac.kr"
+
+var bookDescription:String = "\(title)"
+if ratings != nil {
+    bookDescription += "has \(ratings!.count) ratings"
+}
+if supportURL != nil {
+    bookDescription += "\r\nsupprot web page : \(supportURL!)"
+}
+
+print("\(bookDescription)")
+
+ 
+
+
 
 
 
