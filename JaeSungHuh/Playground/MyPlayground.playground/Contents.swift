@@ -61,9 +61,32 @@ historyBackup
 
 let 노벨:Set = ["마루", "흑도담", "오바케", "서병장"]
 
+var year:Int = 2015
+/*
+if year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)  {
+    print("\(year)년은 윤년입니다.")
+} else  {
+    print("\(year)년은 윤년이 아닙니다.")
+}
+*/
 
+/*
+if 문 연습
 
-
+if year % 4 == 0 {
+    if year % 100 == 0 {
+        if year % 400 == 0 {
+            print("\(year)년은 윤년입니다.")
+        }else {
+            print("\(year)년은 윤년이 아닙니다.")
+        }
+    }else {
+        print("\(year)년은 윤년입니다.")
+    }
+}else {
+    print("\(year)년은 윤년이 아닙니다.")
+}
+*/
 
 
 
