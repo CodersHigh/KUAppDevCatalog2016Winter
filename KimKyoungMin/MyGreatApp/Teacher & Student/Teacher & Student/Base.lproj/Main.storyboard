@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Jcb-JH-AfC">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--calendarViewController-->
+        <scene sceneID="bOf-9s-HeZ">
+            <objects>
+                <viewController title="calendarViewController" id="gxP-Fd-nli" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J2p-FN-Kn9"/>
+                        <viewControllerLayoutGuide type="bottom" id="IJJ-Kn-B4B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wty-jR-R1N">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="calendar" image="calendar" id="iZy-1C-RGX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M1M-j9-d1H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="723" y="-534"/>
+        </scene>
+        <!--studentViewController-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="studentViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Teacher___Student" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="student" image="Student" id="obL-eC-i7t"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="723" y="134"/>
+        </scene>
+        <!--optionViewController-->
+        <scene sceneID="B7Z-y5-QZL">
+            <objects>
+                <viewController title="optionViewController" id="xVN-2Y-PPO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Cd-uC-Dh4"/>
+                        <viewControllerLayoutGuide type="bottom" id="2vh-cm-czn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Z4D-NW-F5H">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Option" image="option" id="Mxo-6c-RJt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tf3-72-naK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="723" y="2792"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="13M-TI-hSh">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Jcb-JH-AfC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="XhW-Kk-7Dg">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="gxP-Fd-nli" kind="relationship" relationship="viewControllers" id="1oE-ey-JyP"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="9ZD-Xz-ajX"/>
+                        <segue destination="DPk-BI-0ux" kind="relationship" relationship="viewControllers" id="jQo-hJ-iwO"/>
+                        <segue destination="74b-YG-CYk" kind="relationship" relationship="viewControllers" id="qVr-p0-IhF"/>
+                        <segue destination="RtN-81-ApR" kind="relationship" relationship="viewControllers" id="ib7-50-niN"/>
+                        <segue destination="xVN-2Y-PPO" kind="relationship" relationship="viewControllers" id="3oT-hG-uT7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ngH-Q1-CFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13" y="804"/>
+        </scene>
+        <!--referenceViewController-->
+        <scene sceneID="CHP-0q-TT9">
+            <objects>
+                <viewController title="referenceViewController" id="RtN-81-ApR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r8X-qU-ORs"/>
+                        <viewControllerLayoutGuide type="bottom" id="zfh-9d-m2h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ayk-42-nrw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Reference" image="clip" id="jJK-wH-qP3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WQc-fL-hVJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="723" y="2110"/>
+        </scene>
+        <!--assignmentViewController-->
+        <scene sceneID="nsf-G5-vZl">
+            <objects>
+                <viewController title="assignmentViewController" id="74b-YG-CYk" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hPv-Rl-qgU"/>
+                        <viewControllerLayoutGuide type="bottom" id="u5j-eT-hjL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7f1-0o-C7o">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="assignment" image="assignment" id="KA6-lE-sF5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ea4-FP-C83" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="723" y="1462"/>
+        </scene>
+        <!--q&aViewController-->
+        <scene sceneID="DiE-MN-spO">
+            <objects>
+                <viewController title="q&amp;aViewController" id="DPk-BI-0ux" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AH3-2z-DGL"/>
+                        <viewControllerLayoutGuide type="bottom" id="cab-PH-JgS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s8X-ts-I1Y">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Q&amp;A" image="Q&amp;A" id="57l-vp-JZS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HRh-9w-xMe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="723" y="804"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Q&amp;A" width="22" height="22"/>
+        <image name="Student" width="22" height="22"/>
+        <image name="assignment" width="22" height="22"/>
+        <image name="calendar" width="22" height="22"/>
+        <image name="clip" width="22" height="22"/>
+        <image name="option" width="22" height="22"/>
+    </resources>
+</document>
