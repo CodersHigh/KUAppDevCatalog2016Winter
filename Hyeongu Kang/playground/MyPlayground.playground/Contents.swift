@@ -63,13 +63,22 @@ speedHistory += [1313]
 historybackup
 
 
-var 가능한시간1:Set = {[10, 11, 12, 13, 14, 17, 18, 19, 20]
-var 가능한시간2:Set = [8, 9, 10, 11, 12, 15, 16, 17, 18, 22, 23,24]
-let 약속시간 = 가능한시간1.intersect(가능한시간2)
+var year:Int = 2016
 
-
-
-
+if year/4 = 0 {
+    if year/100 = 0{
+        if year/400 = 0{
+            print("\(year)은 윤년입니다")}
+        else{print ("\(year)은 윤년이 아닙니다.")}
+    }else{
+    
+        print ("\(year)은 윤년이 아닙니다.")
+    }
+print("\(year)은 윤년입니다")
+}
+else{
+    print ("\(year)은 윤년이 아닙니다.")
+}
 
 
 
