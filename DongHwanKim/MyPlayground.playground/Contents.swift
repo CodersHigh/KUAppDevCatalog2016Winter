@@ -99,7 +99,26 @@ var sortedNames = roomNames.sort();
 
 sortedNames;
 
-    
+var year:Int = 2100;
+
+if((year%4 == 0 && year%100 != 0) || year%400 == 0){
+    print("\(year)은 윤년입니다.");
+} else {
+    print("\(year)은 윤년이 아닙니다.");
+}
+
+let vegetable = "red pepper"
+switch vegetable {
+case "celery":
+    let vegetableComment = "Add some raisins and make ants on a log."
+case "cucumber", "watercress":
+    let vegetableComment = "That would make a good tea sandwich."
+case let x where x.hasSuffix("pepper"):
+    let vegetableComment = "Is it a spicy \(x)?"
+default:
+    let vegetableComment = "Everything tastes good in soup."
+}
+
 
 
 
