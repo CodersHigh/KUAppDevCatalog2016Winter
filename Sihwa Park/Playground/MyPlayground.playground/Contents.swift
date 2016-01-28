@@ -100,12 +100,25 @@ else
 
 
 
+var title : String = "Storyboard Prototyping"
+var ratings : [Int]? = nil
+var supportURL : String? = nil
 
+//print("\(title) has \(ratings!.count) ratings. \r\nsupport web page : \(supportURL)")
 
+supportURL = "www.codershigh.com"
+var bookDescription:String = "\(title)"
 
+if ratings != nil
+{
+    bookDescription += "has \(ratings!.count) ratings"
+}
+if supportURL != nil
+{
+    bookDescription += "\r\nsupport web page: \(supportURL!)"
+}
 
-
-
+print("\(bookDescription)")
 
 
 
