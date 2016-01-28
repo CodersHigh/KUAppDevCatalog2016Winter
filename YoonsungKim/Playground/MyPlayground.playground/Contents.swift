@@ -145,29 +145,58 @@ if leapYear == true {
     print("\(year)년은 윤년이 아닙니다.")
 }
 
+
+
+//              Optional + Function
+
+
 var title : String = "Storyboard Prototyping"
-var ratings : [Int]? = nil
-var supportURL : String? = nil
+var ratings : [Double]? = nil
+var supportURL : String! = nil
 
 supportURL = "www.korea.ac.kr"
+ratings = [4.5, 3.0, 5.0, 2.5]
+
+
+func ratingRecord (history:[Double]) -> (average:Double, min:Double, max:Double) {
+    
+    var sum = 0.0, min = history[0], max = history[0]
+    
+    for value in history {
+        if min > value { min = value }
+        if max < value { max = value }
+        sum += value
+    }
+    
+    let average = sum / Double(history.count)
+    return (average, min, max)
+}
 
 var bookDescription:String = "\(title)"
-if ratings != nil {
-    bookDescription += "has \(ratings!.count) ratings"
+if let theRatings = ratings {
+    let record = ratingRecord(theRatings)
+    bookDescription += "has \(theRatings.count) ratings, \r\n average is \(record.average), from \(record.min) to \(record.max)"
 }
-if supportURL != nil {
-    bookDescription += "\r\nsupprot web page : \(supportURL!)"
-}
+//if supportURL != nil {
+//    bookDescription += "\r\nsupprot web page : \(supportURL!)"
+//}
+
+bookDescription += "\r\nsupprot web page : \(supportURL)"
 
 print("\(bookDescription)")
 
- 
+var num = Int("100")! + Int("300")!
 
+var optionalString : String?
+var nonOptionalString : String = "abc"
 
+optionalString
+//optionalString!
+optionalString = "abcd"
+optionalString? = "abckd"
+//optionalString = nil
 
-
-
-
+optionalString?.uppercaseString
 
 
 
