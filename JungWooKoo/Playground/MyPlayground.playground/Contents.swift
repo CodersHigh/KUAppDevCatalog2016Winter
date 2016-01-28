@@ -109,7 +109,7 @@ for (roomName, capacity) in roomCapacity {
 //처음에 윤년의 여부를 알고 싶은 연도 변수선언
 // if를 중첩문으로 세개사용 4,100,400으로 나눴을 때의 나머지가 0인지 참/거짓으로 윤년의 조건 생성
 // if문을 label을 하여 조건에 맞는 출력을 하면 루프를 빠져나온다
-let year:Int = 2100
+let year:Int = 2200
 
 first : if year % 4 == 0 { //label하여 break를 할 수 있도록 한다
     if year % 100 == 0 {
@@ -123,3 +123,24 @@ first : if year % 4 == 0 { //label하여 break를 할 수 있도록 한다
     print("\(year)년은 윤년입니다")
     break first
 }
+
+//optional
+var title : String = "Storyboard Prototyping"
+var ratings : [Int]? = nil
+var supportURL : String? = nil
+
+//강제 언래핑(!)을 하여 크래시가 난다
+//print ("\(title) has \(ratings!.count) ratings. \r\nsuppport web page : \(supportURL)")
+
+//optional binding
+supportURL = "www.codershigh.com"
+var bookDescription:String = "\(title)"
+
+if ratings != nil {
+    bookDescription += "has \(ratings!.count) ratings"
+}
+if supportURL != nil {
+    bookDescription += "\r\nsupport web page: \(supportURL!)"
+}
+
+print("\(bookDescription)")
