@@ -126,7 +126,7 @@ first : if year % 4 == 0 { //label하여 break를 할 수 있도록 한다
 
 //optional
 var title : String = "Storyboard Prototyping"
-var ratings : [Int]? = nil
+var ratings : [Double]? = nil
 var supportURL : String? = nil
 
 //강제 언래핑(!)을 하여 크래시가 난다
@@ -141,6 +141,30 @@ if ratings != nil {
 }
 if supportURL != nil {
     bookDescription += "\r\nsupport web page: \(supportURL!)"
+}
+
+print("\(bookDescription)")
+
+
+//function
+
+func ratingRecord (history:[Double]) -> (average:Double,min:Double,max:Double){
+    var sum = 0.0, min = history[0], max = history[0]
+    for value in history {
+        if min > value { min = value }
+        if max < value { max = value }
+        sum += value
+    }
+    let average = sum / Double(history.count)
+    return(average, min, max)
+}
+
+ratings = [4.5, 3.0, 5.0, 2.5]
+bookDescription = "\(title)"
+
+if let theRatings = ratings{
+    let record = ratingRecord(theRatings)
+    bookDescription += " has \(theRatings.count) ratings, \r\naverage is \(record.average), from \(record.min) to \(record.max)"
 }
 
 print("\(bookDescription)")
