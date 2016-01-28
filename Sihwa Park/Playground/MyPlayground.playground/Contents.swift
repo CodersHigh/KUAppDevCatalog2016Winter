@@ -101,7 +101,7 @@ else
 
 
 var title : String = "Storyboard Prototyping"
-var ratings : [Int]? = nil
+var ratings : [Double]? = nil
 var supportURL : String? = nil
 
 //print("\(title) has \(ratings!.count) ratings. \r\nsupport web page : \(supportURL)")
@@ -122,9 +122,49 @@ print("\(bookDescription)")
 
 
 
+func ratingRecord (history:[Double]) -> (average:Double, min:Double, max:Double)?
+{
+    var sum = 0.0, min = history[0], max = history[0]
+    
+    if(history.count==0)
+    {
+        return nil
+    }
+    
+    for value in history
+    {
+        if min>value
+        {
+            min = value
+        }
+        if max<value
+        {
+            max = value
+        }
+        sum+=value
+    }
+    
+    let average = sum / Double(history.count)
+    return (average, min, max)
+    
+}
+
+ratings = []
+bookDescription = "\(title)"
+if let theRatings = ratings
+{
+    if let record = ratingRecord(theRatings)
+    {
+        bookDescription += " has \(theRatings.count) ratings, \r\n average is \(record.average), from \(record.min) to \(record.max)"
+    }
+    else
+    {
+        bookDescription += " has error"
+    }
+}
 
 
-
+print(bookDescription)
 
 
 
