@@ -18,12 +18,6 @@ if let opRate = ratings {
 
 var value = "234"
 
-var aValue : Int? = nil
-
-aValue = 20
-
-print("\(aValue)")
-
 func findStockCode(company : String) -> String? {
     
     if (company == "Apple") {
@@ -43,3 +37,39 @@ if let stockCode = stockCode {
 }
 
 print("\(stockCode)")
+
+let optionalEmail: Int? = 20
+let requiredEmail: String? = "Hi"
+let a = optionalEmail
+
+if let v = optionalEmail where v > 10 {
+    print("\(v)")
+}
+
+func ratingRecord (history:[Double]) -> (average:Double, min:Double, max:Double) {
+    
+    var sum = 0.0, min = history[0], max = history[0]
+    
+    for value in history {
+        if min > value {
+            min = value
+        } else if max < value {
+            max = value
+        }
+        
+        sum += value
+    }
+    
+    return (sum/Double(history.count), min, max)
+}
+
+ratings = []
+
+var bookDescription: String = "\(title)"
+
+if let theRatings = ratings where theRatings != []{
+    let record = ratingRecord(theRatings)
+    bookDescription += "has \(theRatings.count) ratings, \r\n average is \(record.average), from \(record.min) to \(record.max)"
+}
+
+print("\(bookDescription)")
