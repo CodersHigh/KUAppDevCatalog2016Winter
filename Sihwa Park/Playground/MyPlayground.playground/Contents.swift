@@ -151,20 +151,88 @@ func ratingRecord (history:[Double]) -> (average:Double, min:Double, max:Double)
 
 ratings = []
 bookDescription = "\(title)"
-if let theRatings = ratings
-{
-    if let record = ratingRecord(theRatings)
-    {
-        bookDescription += " has \(theRatings.count) ratings, \r\n average is \(record.average), from \(record.min) to \(record.max)"
-    }
-    else
-    {
-        bookDescription += " has error"
-    }
-}
+//if let theRatings = ratings
+//{
+//    if let record = ratingRecord(theRatings)
+//    {
+//        bookDescription += " has \(theRatings.count) ratings, \r\n average is \(record.average), from \(record.min) to \(record.max)"
+//    }
+//    else
+//    {
+//        bookDescription += " has error"
+//    }
+//}
 
 
 print(bookDescription)
+
+
+//struct Task
+//{
+//    var title:String
+//    var time:Int?
+//}
+//
+//var callTask = Task(title: "Call to Randy", time: 10*60)
+////var reportTask = Task()
+//var reportTask = Task(title: "Report to Boss", time: nil)
+//
+//var todayTask:[Task] = []
+//todayTask += [callTask, reportTask]
+//todayTask[1].time = 15*60
+//
+//callTask.title = "Call to Toby"
+//print("today task = \(todayTask) \r\n callTask = \(callTask) \r\n reportTask = \(reportTask)")
+//
+
+
+
+
+
+class Employee {
+    var name:String?
+    var phoneNumber:String?
+    var boss:Employee?
+}
+
+struct Task {
+    var title:String
+    var time:Int?
+    
+    var owner:Employee
+    var participant:Employee?
+}
+
+let me:Employee = Employee()
+me.name = "Alex"
+me.phoneNumber = "010-1234-5678"
+
+let toby:Employee = Employee()
+toby.name = "Toby"
+toby.phoneNumber = "011-5678-1234"
+
+var callTask = Task(title: "Call to Toby", time: 10*60, owner:me, participant:toby)
+var reportTask = Task(title:"Report to Boss", time: nil, owner:me, participant:nil)
+callTask.participant?.phoneNumber = "010-5678-1234"
+
+var todayTask:[Task] = []
+todayTask += [callTask, reportTask]
+todayTask[1].time = 15*60
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
