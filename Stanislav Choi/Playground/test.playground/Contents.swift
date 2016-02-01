@@ -4,6 +4,8 @@ import UIKit
 
 //-------------------------------------------------------------------------------------------------
 
+/*
+
 let maxSpeed : Int = 200
 //maxSpeed += 10
 
@@ -11,7 +13,11 @@ var currentSpeed : Int = 110
 currentSpeed += 10
 //currentSpeed += 20.5
 
+*/
+
 //-------------------------------------------------------------------------------------------------
+
+/*
 
 let name : String = "Stanislav"
 var greeting = "Hello"
@@ -25,20 +31,32 @@ let hasProtocol = url.hasPrefix("http://")
 
 print("\(name) has \(count) characters")
 
+*/
+
 //-------------------------------------------------------------------------------------------------
+
+/*
 
 let intMax = Int.max
 let UintMax = UInt.max
 let intMin = Int.min
 let UintMin = UInt.min
 
+*/
+
 //-------------------------------------------------------------------------------------------------
+
+/*
 
 let intValue = 52
 let nextValue = intValue.successor()
 print("\(nextValue)")
 
+*/
+
 //-------------------------------------------------------------------------------------------------
+
+/*
 
 let time1 = (9, 0, 48)
 time1.0
@@ -51,7 +69,11 @@ let duration = (time1, time2)
 let (start, end) = duration
 let endHour = end.h
 
+*/
+
 //-------------------------------------------------------------------------------------------------
+
+/*
 
 typealias Time = (h : Int, m : Int, s : Int)
 typealias Duration = (start : Time, end : Time)
@@ -59,7 +81,11 @@ typealias Duration = (start : Time, end : Time)
 let today : Duration = ((10, 5, 21), (15, 3, 18))
 print("We studied \(today.end.h - today.start.h) hours today")
 
+*/
+
 //-------------------------------------------------------------------------------------------------
+
+/*
 
 var meetingRooms : Array<String> = ["Banksy", "Rivera", "Kahlo", "Picasso", "Cezanne", "Matisse"]
 
@@ -67,7 +93,11 @@ var groups : Array<Int> = [10, 8, 14, 9]
 
 meetingRooms += ["Renoir"]
 
+*/
+
 //-------------------------------------------------------------------------------------------------
+
+/*
 
 var speedHistory : [Int] = []
 speedHistory += [currentSpeed]
@@ -81,7 +111,11 @@ let historyBackup = speedHistory
 speedHistory += [150]
 historyBackup
 
+*/
+
 //-------------------------------------------------------------------------------------------------
+
+/*
 
 var roomCapacity : [String : Int] = ["Banksy" : 4, "Rivera" : 8, "Kahlo" : 8, "Picasso" : 10, "Cezanne" : 20, "Matisse" : 30]
 roomCapacity["Renoir"] = 40
@@ -92,7 +126,11 @@ roomCapacity["Renoir"] = 40
 let roomNames = [String](roomCapacity.keys)
 let capacities = [Int](roomCapacity.values)
 
+*/
+
 //-------------------------------------------------------------------------------------------------
+
+/*
 
 let subway2 :Set = ["시청", "을지로입구", "을지로3가", "을지로4가","동대문역사문화공원", "신당", "상왕십리", "왕십리", "한양대", "뚝섬", "성수", "건대입구", "구의", "강변", "잠실나루", "잠실", "신천", "종합운동장", "삼성", "선릉", "역삼", "강남", "교대", "서초", "방배", "사당", "낙성대", "서울대입구", "봉천", "신림", "신대방", "구로디지털단지", "대림", "신도림", "문래", "영등포구청", "당산", "합정", "홍대입구", "신촌", "이대", "아현", "충정로"]
 subway2.count
@@ -111,10 +149,14 @@ union.count
 let exOR = subway2.exclusiveOr(subway3)
 exOR.count
 
+*/
+
 //-------------------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------------------
 
 //-------------------------------------------------------------------------------------------------
+
+/*
 
 let cheetah : Int = 0
 //let robotCheetah : Int = nil
@@ -150,7 +192,11 @@ var supportingURL : String! = nil
 supportingURL = "www.codershigh.com"
 bookDescription += "\r\nsupport web page : \(supportingURL)"
 
+*/
+
 //-------------------------------------------------------------------------------------------------
+
+/*
 
 func ratingRecord (history : [Double]) -> (average : Double, min : Double, max : Double) {
     var sum = 0.0, min = history[0], max = history[0]
@@ -164,11 +210,128 @@ func ratingRecord (history : [Double]) -> (average : Double, min : Double, max :
     return (average, min, max)
 }
 
-ratings = [4.5, 3.0, 5.0, 2.5]
+//ratings = [4.5, 3.0, 5.0, 2.5]
 
 bookDescription = "\(title)"
 
 if let theRatings = ratings {
-    let record = ratingRecord(theRatings)
+//    let record = ratingRecord(theRatings)
     bookDescription
 }
+
+*/
+
+//-------------------------------------------------------------------------------------------------
+
+/* struct Task {
+    var title : String
+    var time : Int?
+}
+
+var callTask = Task(title : "Call to Randy", time : 10*60)
+var reportTask = Task(title : "Report to Boss", time : nil)
+reportTask.title = "Report to Boss"
+
+var todayTask : [Task] = []
+todayTask += [callTask, reportTask]
+
+todayTask[1].time = 15*60
+callTask.title = "Call to Toby"
+
+print("today task = \(todayTask) \r\n callTask = \(callTask)") */
+
+//-------------------------------------------------------------------------------------------------
+
+/*
+
+class Employee {
+    var name : String?
+    var phoneNumber : String?
+    var boss : Employee?
+}
+
+struct Task {
+    var title : String
+    var time : Int?
+    
+    var owner : Employee
+    var participant : Employee?
+    
+    var type : TaskType
+    
+    enum TaskType {
+        case Call
+        case Report
+        case Meet
+        case Support
+        
+        var typeTitle : String {
+            get {
+                let titleString : String
+                switch self {
+                case .Call:
+                    titleString = "Call"
+                case .Report:
+                    titleString = "Report"
+                case .Meet:
+                    titleString = "Meet"
+                case .Support:
+                    titleString = "Support"
+                    
+                }
+                return titleString
+            }
+        }
+    }
+}
+
+let me : Employee = Employee()
+me.name = "Alex"
+me.phoneNumber = "010-1234-5678"
+
+let toby : Employee = Employee()
+toby.name = "Toby"
+toby.phoneNumber = "011-5678-1234"
+
+var callTask = Task(title : "Call to Toby", time : 10*60, owner : me, participant : toby, type : .Call)
+var reportTask = Task(title : "Report to Boss", time : nil, owner : me, participant : nil, type : Task.TaskType.Report)
+
+callTask.participant?.phoneNumber = "010-5678-1234"
+
+*/
+
+//-------------------------------------------------------------------------------------------------
+
+/*
+
+struct Resolution {
+    var width = 0
+    var height = 0
+}
+
+class VideoMode {
+    var resolution = Resolution()
+    var interlace = false
+    var frameRate = 0.0
+    var name : String?
+}
+
+*/
+
+//------------------------------------------------------------------------------------------------
+
+
+class userProfile {
+    var name : String = ""
+    var surname : String = ""
+    var introduction : String?
+    var country : String = ""
+    var age : Int = 0
+}
+
+let me : userProfile = userProfile()
+me.introduction = "Hello! My name is Stanislav"
+
+
+
+//------------------------------------------------------------------------------------------------
