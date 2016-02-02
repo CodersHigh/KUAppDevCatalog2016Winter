@@ -10,25 +10,38 @@ var newyorkpoi = ["미국, 뉴욕":["뉴왁국제공항", "뉴욕 타임스 스�
 */
 //var worldpoi = [seoulpoi, parispoi, londonpoi, newyorkpoi]
 
+enum Continent
+{
+    case Asia
+    case Europe
+    case NorthAmerica
+    case SouthAmerica
+    case Oceania
+    case Africa
+}
+
 class Country
 {
-    let name:String
-    var cities:[City]?
+    var name:String = ""
+    var cities:[City] = []
+    var region : Continent = .Asia
 }
 
 class City
 {
-    let name:String?
-    let image:String?
-    var places:[Place]?
+    var name:String = ""
+    var image:String = ""
+    var places:[Place] = []
     
 }
 
 class Place
 {
-    let name:String?
-    let latitude:Double?
-    let longitude:Double?
+    var name:String = ""
+    var latitude:Double = 0
+    var longitude:Double = 0
+    
+    
     
 }
 
@@ -37,29 +50,38 @@ Korea.name = "Korea"
 
 let Seoul = City()
 Seoul.name = "Seoul"
-Korea.cities?.append(Seoul)
+Seoul.image = "http://github.com/PlanA/Korea/Seoul/3242349"
+Korea.cities.append(Seoul)
 
 let incheonAirport = Place()
 incheonAirport.latitude = 184.34
 incheonAirport.longitude = 23.83
-Seoul.places?.append(incheonAirport)
+Seoul.places.append(incheonAirport)
 
 
 let France = Country()
 France.name = "France"
+France.region = .Europe
 
 let Paris = City()
 Paris.name = "Paris"
-France.cities?.append(Paris)
+Paris.image = "http://github.com/PlanA/France/Paris/9488833"
+France.cities.append(Paris)
 
 let cdgAirport = Place()
+cdgAirport.name = "Cdg Airport"
 cdgAirport.latitude = 234.52
 cdgAirport.longitude = 86.21
-Paris.places?.append(cdgAirport)
+Paris.places.append(cdgAirport)
 let eiffelTower = Place()
+eiffelTower.name = "Eiffel Tower"
 eiffelTower.latitude = 235.23
 eiffelTower.longitude = 84.29
-Paris.places?.append(eiffelTower)
+Paris.places.append(eiffelTower)
+
+Paris.places
+
+
 
 
 
