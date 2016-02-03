@@ -71,9 +71,32 @@ class Employee
         self.init(name:name)
         self.phoneNumber = phone
     }
+    
+    func report(owner:Employee)
+    {
+        if let myBoss = owner.boss
+        {
+            print("\(self.name) reported to \(myBoss.name)")
+            
+        }
+        else
+        {
+            print("\(name) don't have boss")
+        }
+    }
+    
+    func callTaskToBoss() -> Task?
+    {
+        if let myBoss = boss, callTo = myBoss.phoneNumber
+        {
+            var callTask = Task(type: .Call, owner: self)
+            return callTask
+        }
+        return nil
+    }
 }
 
-
+var todayTask:[Task] = []
 
 let me:Employee = Employee(name: "Alex", phone: "010-3423-3562")
 let toby:Employee = Employee(name: "Toby")
@@ -81,14 +104,25 @@ toby.phoneNumber = "011-4895-8193"
 
 var callTask = Task(type: .Call, owner: me)
 callTask.time = 10*60
+todayTask += [callTask]
 var reportTask = Task(type: .Report, owner: me)
-
+todayTask += [reportTask]
 
 callTask
 reportTask
 
 
 
+me.boss = toby
+me.report(me)
+
+
+if let callTask = me.callTaskToBoss()
+{
+    todayTask += [callTask]
+}
+
+print(todayTask)
 
 
 
