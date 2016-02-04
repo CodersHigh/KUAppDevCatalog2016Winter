@@ -20,66 +20,128 @@ enum Continent
     case Africa
 }
 
+enum IsSpecialPlace
+{
+    case DeparturePoint
+    case ArrivalPoint
+    case MiddlePoint
+}
+
+class Itinerary
+{
+    let name:String
+    let makeDate:NSDate
+    var itinerary:[Country] = []
+    
+    func addCountry(newCountry:Country)
+    {
+        self.itinerary.append(newCountry)
+    }
+    
+    init(name:String, makeDate:NSDate)
+    {
+        self.name = name
+        self.makeDate = makeDate
+    }
+}
+
 class Country
 {
-    var name:String = ""
+    let name:String
     var cities:[City] = []
-    var region : Continent = .Asia
+    let region : Continent
+    
+    func addCity(newCity:City)
+    {
+        self.cities.append(newCity)
+    }
+    
+    init(name:String, continent:Continent)
+    {
+        self.name = name
+        self.region = continent
+    }
 }
 
 class City
 {
-    var name:String = ""
-    var image:String = ""
+    let name:String
+    let image:String
     var places:[Place] = []
+    
+    func addPlace(newPlace:Place)
+    {
+        self.places.append(newPlace)
+        
+    }
+    
+    init(name:String, image:String)
+    {
+        self.name = name
+        self.image = image
+    }
     
 }
 
 class Place
 {
-    var name:String = ""
-    var latitude:Double = 0
-    var longitude:Double = 0
+    let name:String
+    let image:String
+    let coordinate:(Double, Double)
+    var placeType:IsSpecialPlace
     
-    
+    init(name:String, image:String, coordinate:(Double, Double), placetype:IsSpecialPlace)
+    {
+        self.name = name
+        self.image = image
+        self.coordinate = coordinate
+        self.placeType = placetype
+    }
     
 }
 
-let Korea = Country()
-Korea.name = "Korea"
-
-let Seoul = City()
-Seoul.name = "Seoul"
-Seoul.image = "http://github.com/PlanA/Korea/Seoul/3242349"
-Korea.cities.append(Seoul)
-
-let incheonAirport = Place()
-incheonAirport.latitude = 184.34
-incheonAirport.longitude = 23.83
-Seoul.places.append(incheonAirport)
+var PlanA = Itinerary(name: "PlanA", makeDate: NSDate())
 
 
-let France = Country()
-France.name = "France"
-France.region = .Europe
+let Korea = Country(name: "Korea", continent: .Asia)
+PlanA.addCountry(Korea)
 
-let Paris = City()
-Paris.name = "Paris"
-Paris.image = "http://github.com/PlanA/France/Paris/9488833"
-France.cities.append(Paris)
+let Seoul = City(name: "Seoul", image: "http://github.com/PlanA/Korea/Seoul/3242349")
+Korea.addCity(Seoul)
 
-let cdgAirport = Place()
-cdgAirport.name = "Cdg Airport"
-cdgAirport.latitude = 234.52
-cdgAirport.longitude = 86.21
-Paris.places.append(cdgAirport)
-let eiffelTower = Place()
-eiffelTower.name = "Eiffel Tower"
-eiffelTower.latitude = 235.23
-eiffelTower.longitude = 84.29
-Paris.places.append(eiffelTower)
+let incheonAirport = Place(name: "Incheon Airport", image: "http://github.com/PlanA/Korea/Seoul/incheonAirport", coordinate: (37.460448, 126.440619), placetype: .DeparturePoint)
+Seoul.addPlace(incheonAirport)
 
-Paris.places
+
+let France = Country(name: "France", continent: .Europe)
+PlanA.addCountry(France)
+
+let Paris = City(name: "Paris", image: "http://github.com/PlanA/France/Paris/9488833")
+France.addCity(Paris)
+
+let cdgAirport = Place(name: "Charles de Gaulle Airport", image: "http://github.com/PlanA/France/Paris/cdgAirport", coordinate: (49.009845, 2.547946), placetype: .MiddlePoint)
+Paris.addPlace(cdgAirport)
+let eiffelTower = Place(name: "Eiffel Tower", image: "http://github.com/PlanA/France/Paris/eiffelTower", coordinate: (48.858557, 2.294411), placetype: .MiddlePoint)
+Paris.addPlace(eiffelTower)
+let triomphe = Place(name: "Arc de Triomphe", image: "http://github.com/PlanA/France/Paris/triomphe", coordinate: (48.873968, 2.295060), placetype: .MiddlePoint)
+Paris.addPlace(triomphe)
+
+
+let USA = Country(name: "USA", continent: .NorthAmerica)
+PlanA.addCountry(USA)
+
+let NewYork = City(name: "New York", image: "http://github.com/PlanA/USA/NewYork")
+USA.addCity(NewYork)
+
+let newarkAirport = Place(name: "Newark Liberty International Airport", image: "http://github.com/PlanA/USA/NewYork/newarkAirport", coordinate: (40.689800, -74.174527), placetype: .MiddlePoint)
+NewYork.addPlace(newarkAirport)
+let timesSquare = Place(name: "Times Square", image: "http://github.com/PlanA/USA/NewYork/timesSquare", coordinate: (40.758895, -73.984702), placetype: .MiddlePoint)
+NewYork.addPlace(timesSquare)
+let centralPark = Place(name: "Central Park", image: "http://github.com/PlanA/USA/NewYork/centralPark", coordinate: (40.782842, -73.965325), placetype: .ArrivalPoint)
+NewYork.addPlace(centralPark)
+
+
+
 
 
 

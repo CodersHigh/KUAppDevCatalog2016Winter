@@ -8,7 +8,7 @@ struct Task
     var time:Int?
     
     var owner:Employee
-    var participant:Employee?
+    //var participant:Employee?
     
     var type:TaskType
     
@@ -44,15 +44,40 @@ struct Task
         
     }
     
+    
+    func doBasicTask() -> String
+    {
+        let taskDescription:String
+        switch type
+        {
+        case .Call(let number) :
+            taskDescription = "\(owner.name) make a call to \(number)"
+        case .Report(let receiver, let time) :
+            taskDescription = "\(owner.name) report to \(receiver.name) at \(time)"
+        case .Meet(let participant, let location) :
+            taskDescription = "\(owner.name) meet \(participant.name) at \(location)"
+        case .Support(let taskOwner, let duration):
+            taskDescription = "\(owner.name) support \(taskOwner.name) for \(duration) days"
+        default :
+            taskDescription = "Need more information for task."
+        }
+        
+        return taskDescription
+    }
+    
+    
+    
     init (type:TaskType, owner:Employee)
     {
         self.type = type
         self.title = type.typeTitle
         self.owner = owner
         self.time = nil
-        self.participant = nil
+        //self.participant = nil
         
     }
+    
+    
     
 }
 
@@ -89,7 +114,7 @@ class Employee
     {
         if let myBoss = boss, callTo = myBoss.phoneNumber
         {
-            var callTask = Task(type: .Call(number:"010-9993-5643"), owner: self)
+            let callTask = Task(type: .Call(number:"010-9993-5643"), owner: self)
             return callTask
         }
         return nil
@@ -120,10 +145,11 @@ me.report(me)
 if let callTask = me.callTaskToBoss()
 {
     todayTask += [callTask]
+    callTask.doBasicTask()
 }
 
 print(todayTask)
-
+print(reportTask.doBasicTask())
 
 
 
