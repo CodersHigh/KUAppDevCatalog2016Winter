@@ -14,10 +14,10 @@ struct Task
     
     enum TaskType
     {
-        case Call
-        case Report
-        case Meet
-        case Support
+        case Call(number:String)
+        case Report(to:Employee, when:String)
+        case Meet(with:Employee, location:String)
+        case Support(who:Employee, duration:Int)
         
         var typeTitle:String
             {
@@ -89,7 +89,7 @@ class Employee
     {
         if let myBoss = boss, callTo = myBoss.phoneNumber
         {
-            var callTask = Task(type: .Call, owner: self)
+            var callTask = Task(type: .Call(number:"010-9993-5643"), owner: self)
             return callTask
         }
         return nil
@@ -102,10 +102,10 @@ let me:Employee = Employee(name: "Alex", phone: "010-3423-3562")
 let toby:Employee = Employee(name: "Toby")
 toby.phoneNumber = "011-4895-8193"
 
-var callTask = Task(type: .Call, owner: me)
+var callTask = Task(type: .Call(number:"010-3333-1111"), owner: me)
 callTask.time = 10*60
 todayTask += [callTask]
-var reportTask = Task(type: .Report, owner: me)
+var reportTask = Task(type: .Report(to:toby, when:"Afternoon"), owner: me)
 todayTask += [reportTask]
 
 callTask

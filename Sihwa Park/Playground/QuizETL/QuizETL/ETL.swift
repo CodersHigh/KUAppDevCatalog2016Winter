@@ -10,12 +10,18 @@ import Foundation
 
 class ETL
 {
-    func transform(/*old:Dictionary<Int, [String]>*/) -> Dictionary<String, Int>
+    func transform(oldDictionary:Dictionary<Int,
+        Array<String>>) -> Dictionary<String, Int>
     {
-        //let old = [ 1 : [ "A", "E" ], 2: ["D", "G"] ]
+        var returnDictionary :Dictionary<String, Int> = [:]
         
-        let result:Dictionary<String, Int> = [:]
-        
-        return result
+        for (value, keys) in oldDictionary
+        {
+            for key in keys
+            {
+                returnDictionary[key.lowercaseString] = value
+            }
+        }
+        return returnDictionary
     }
 }
