@@ -100,6 +100,148 @@ else
 
 
 
+var title : String = "Storyboard Prototyping"
+var ratings : [Double]? = nil
+var supportURL : String? = nil
+
+//print("\(title) has \(ratings!.count) ratings. \r\nsupport web page : \(supportURL)")
+
+supportURL = "www.codershigh.com"
+var bookDescription:String = "\(title)"
+
+if ratings != nil
+{
+    bookDescription += "has \(ratings!.count) ratings"
+}
+if supportURL != nil
+{
+    bookDescription += "\r\nsupport web page: \(supportURL!)"
+}
+
+print("\(bookDescription)")
+
+
+
+func ratingRecord (history:[Double]) -> (average:Double, min:Double, max:Double)?
+{
+    var sum = 0.0, min = history[0], max = history[0]
+    
+    if(history.count==0)
+    {
+        return nil
+    }
+    
+    for value in history
+    {
+        if min>value
+        {
+            min = value
+        }
+        if max<value
+        {
+            max = value
+        }
+        sum+=value
+    }
+    
+    let average = sum / Double(history.count)
+    return (average, min, max)
+    
+}
+
+ratings = []
+bookDescription = "\(title)"
+//if let theRatings = ratings
+//{
+//    if let record = ratingRecord(theRatings)
+//    {
+//        bookDescription += " has \(theRatings.count) ratings, \r\n average is \(record.average), from \(record.min) to \(record.max)"
+//    }
+//    else
+//    {
+//        bookDescription += " has error"
+//    }
+//}
+
+
+print(bookDescription)
+
+
+//struct Task
+//{
+//    var title:String
+//    var time:Int?
+//}
+//
+//var callTask = Task(title: "Call to Randy", time: 10*60)
+////var reportTask = Task()
+//var reportTask = Task(title: "Report to Boss", time: nil)
+//
+//var todayTask:[Task] = []
+//todayTask += [callTask, reportTask]
+//todayTask[1].time = 15*60
+//
+//callTask.title = "Call to Toby"
+//print("today task = \(todayTask) \r\n callTask = \(callTask) \r\n reportTask = \(reportTask)")
+//
+
+
+
+
+
+class Employee {
+    var name:String?
+    var phoneNumber:String?
+    var boss:Employee?
+}
+
+struct Task {
+    var title:String
+    var time:Int?
+    
+    var owner:Employee
+    var participant:Employee?
+}
+
+let me:Employee = Employee()
+me.name = "Alex"
+me.phoneNumber = "010-1234-5678"
+
+let toby:Employee = Employee()
+toby.name = "Toby"
+toby.phoneNumber = "011-5678-1234"
+
+var callTask = Task(title: "Call to Toby", time: 10*60, owner:me, participant:toby)
+var reportTask = Task(title:"Report to Boss", time: nil, owner:me, participant:nil)
+callTask.participant?.phoneNumber = "010-5678-1234"
+
+var todayTask:[Task] = []
+todayTask += [callTask, reportTask]
+todayTask[1].time = 15*60
+
+
+
+
+struct Resolution
+{
+    var width = 0
+    var height = 0
+}
+
+
+class VideoMode
+{
+    var resolution = Resolution()
+    var interlaced = false
+    var frameRate = 0.0
+    var name: String?
+    
+}
+
+
+
+
+
 
 
 
