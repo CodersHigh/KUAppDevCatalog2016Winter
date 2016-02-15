@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MoneyConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kkf-Nq-OkR">
+                                <rect key="frame" x="167" y="96" width="267" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2tL-Ky-xmQ"/>
+                                    <constraint firstAttribute="width" constant="267" id="nGT-uy-sgN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OM3-62-aY3">
+                                <rect key="frame" x="247" y="28" width="107" height="29"/>
+                                <segments>
+                                    <segment title="$ -&gt; ₩"/>
+                                    <segment title="₩ -&gt; $"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEa-mW-98a">
+                                <rect key="frame" x="288" y="244" width="24" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uty-gG-OhB">
+                                <rect key="frame" x="273" y="178" width="55" height="30"/>
+                                <state key="normal" title="Convert"/>
+                                <connections>
+                                    <action selector="convert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iHv-0i-QqY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OM3-62-aY3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="5rp-bB-fgo"/>
+                            <constraint firstItem="PEa-mW-98a" firstAttribute="top" secondItem="uty-gG-OhB" secondAttribute="bottom" constant="36" id="5vL-ra-BT4"/>
+                            <constraint firstItem="uty-gG-OhB" firstAttribute="top" secondItem="Kkf-Nq-OkR" secondAttribute="bottom" constant="52" id="GnB-tr-Y1a"/>
+                            <constraint firstItem="Kkf-Nq-OkR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a2R-fU-ZDF"/>
+                            <constraint firstItem="Kkf-Nq-OkR" firstAttribute="top" secondItem="OM3-62-aY3" secondAttribute="bottom" constant="40" id="pey-3a-7fN"/>
+                            <constraint firstItem="PEa-mW-98a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q4m-da-obZ"/>
+                            <constraint firstItem="uty-gG-OhB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tE3-6z-nl6"/>
+                            <constraint firstItem="OM3-62-aY3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="znY-Js-zcf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currencySegment" destination="OM3-62-aY3" id="nHj-hp-HhE"/>
+                        <outlet property="moneyField" destination="Kkf-Nq-OkR" id="0BW-HT-b9i"/>
+                        <outlet property="resultLabel" destination="PEa-mW-98a" id="zFv-YI-3tb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="418"/>
+        </scene>
+    </scenes>
+</document>
