@@ -378,6 +378,7 @@ print("square.origin is now at (\(square.origin.x), \(square.origin.y))")
 */
 
 //------------------------------------------------------------------------------------------------
+/*
 
 class Building {
     var name : String = ""
@@ -387,3 +388,6 @@ struct engineeringCampus {
     var building = Building()
     
 }
+
+*/
+
