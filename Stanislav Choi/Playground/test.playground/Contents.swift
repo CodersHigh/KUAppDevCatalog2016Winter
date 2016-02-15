@@ -320,6 +320,7 @@ class VideoMode {
 
 //------------------------------------------------------------------------------------------------
 
+/*
 
 class userProfile {
     var name : String = ""
@@ -332,6 +333,57 @@ class userProfile {
 let me : userProfile = userProfile()
 me.introduction = "Hello! My name is Stanislav"
 
-
+*/
 
 //------------------------------------------------------------------------------------------------
+/*
+
+struct Point {
+    var x = 0.0, y = 0.0
+}
+
+struct Size {
+    var width = 0.0, height = 0.0
+}
+
+struct Rect {
+    var origin = Point()
+    var size = Size()
+    var center : Point {
+        get {
+            let centerX = origin.x + (size.width / 2)
+            let centerY = origin.y + (size.width / 2)
+            print("get 속성이 호출되었습니다.")
+            return Point(x : centerX, y : centerY)
+        }
+        set {
+            origin.x = newValue.x - (size.width / 2)
+            origin.y = newValue.y - (size.height / 2)
+            print("set 속성이 호출되었습니다.")
+        }
+    }
+}
+
+var square = Rect(origin : Point(x: 0.0, y : 0.0), size : Size(width : 10.0, height : 10.0))
+print("Rect를 생성했습니다.")
+
+let initialSquareCenter = square.center
+print("initialSquareCenter를 선언했습니다.")
+
+square.center = Point(x : 15.0, y : 15.0)
+print("Point를 사용해서 square.center를 설정했습니다.")
+
+print("square.origin is now at (\(square.origin.x), \(square.origin.y))")
+
+*/
+
+//------------------------------------------------------------------------------------------------
+
+class Building {
+    var name : String = ""
+}
+
+struct engineeringCampus {
+    var building = Building()
+    
+}
