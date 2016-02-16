@@ -113,10 +113,22 @@ union.count
 let exOR = subway2.exclusiveOr(subway3)
 exOR.count
 
-if transfer.count > 0 {
-    print("환승역은 \(transfer) 입니다.")
+if transfer.count > 4 {
+    print("환승역은 엄청 많습니다.")
+} else if transfer.count > 0 {
+     print("환승역은 \(transfer) 입니다.")
 } else {
     print("환승역은 없습니다.")
+}
+
+
+switch transfer.count {
+    case let transferStation where transferStation > 4 :
+        print("환승역은 엄청 많습니다.")
+    case let transferStation where transferStation > 0 :
+        print("환승역은 \(transfer) 입니다.")
+    default :
+        print("환승역은 없습니다.")
 }
 
 for station in subway2 {
