@@ -7,29 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E56156B81C71944B0085AF38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56156B71C71944B0085AF38 /* AppDelegate.swift */; };
-		E56156BA1C71944B0085AF38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56156B91C71944B0085AF38 /* ViewController.swift */; };
-		E56156BD1C71944B0085AF38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56156BB1C71944B0085AF38 /* Main.storyboard */; };
-		E56156BF1C71944B0085AF38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E56156BE1C71944B0085AF38 /* Assets.xcassets */; };
-		E56156C21C71944B0085AF38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56156C01C71944B0085AF38 /* LaunchScreen.storyboard */; };
-		E56156E81C72BDF00085AF38 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56156E71C72BDF00085AF38 /* Money.swift */; };
-		E561570D1C75867D0085AF38 /* MoneyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E561570C1C75867D0085AF38 /* MoneyListViewController.swift */; };
+		E56156FB1C72E5BD0085AF38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56156FA1C72E5BD0085AF38 /* AppDelegate.swift */; };
+		E56156FD1C72E5BD0085AF38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56156FC1C72E5BD0085AF38 /* ViewController.swift */; };
+		E56157001C72E5BD0085AF38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56156FE1C72E5BD0085AF38 /* Main.storyboard */; };
+		E56157021C72E5BD0085AF38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E56157011C72E5BD0085AF38 /* Assets.xcassets */; };
+		E56157051C72E5BD0085AF38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56157031C72E5BD0085AF38 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E56156B41C71944B0085AF38 /* MoneyConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E56156B71C71944B0085AF38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E56156B91C71944B0085AF38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E56156BC1C71944B0085AF38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E56156BE1C71944B0085AF38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E56156C11C71944B0085AF38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E56156C31C71944B0085AF38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E56156E71C72BDF00085AF38 /* Money.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
-		E561570C1C75867D0085AF38 /* MoneyListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyListViewController.swift; sourceTree = "<group>"; };
+		E56156F71C72E5BD0085AF38 /* PlanA_3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanA_3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E56156FA1C72E5BD0085AF38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E56156FC1C72E5BD0085AF38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E56156FF1C72E5BD0085AF38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E56157011C72E5BD0085AF38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E56157041C72E5BD0085AF38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E56157061C72E5BD0085AF38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E56156B11C71944B0085AF38 /* Frameworks */ = {
+		E56156F41C72E5BD0085AF38 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,73 +35,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E56156AB1C71944B0085AF38 = {
+		E56156EE1C72E5BD0085AF38 = {
 			isa = PBXGroup;
 			children = (
-				E56156B61C71944B0085AF38 /* MoneyConverter */,
-				E56156B51C71944B0085AF38 /* Products */,
+				E56156F91C72E5BD0085AF38 /* PlanA_3 */,
+				E56156F81C72E5BD0085AF38 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		E56156B51C71944B0085AF38 /* Products */ = {
+		E56156F81C72E5BD0085AF38 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E56156B41C71944B0085AF38 /* MoneyConverter.app */,
+				E56156F71C72E5BD0085AF38 /* PlanA_3.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E56156B61C71944B0085AF38 /* MoneyConverter */ = {
+		E56156F91C72E5BD0085AF38 /* PlanA_3 */ = {
 			isa = PBXGroup;
 			children = (
-				E56156B71C71944B0085AF38 /* AppDelegate.swift */,
-				E56156B91C71944B0085AF38 /* ViewController.swift */,
-				E56156BB1C71944B0085AF38 /* Main.storyboard */,
-				E56156E71C72BDF00085AF38 /* Money.swift */,
-				E56156BE1C71944B0085AF38 /* Assets.xcassets */,
-				E56156C01C71944B0085AF38 /* LaunchScreen.storyboard */,
-				E56156C31C71944B0085AF38 /* Info.plist */,
-				E561570C1C75867D0085AF38 /* MoneyListViewController.swift */,
+				E56156FA1C72E5BD0085AF38 /* AppDelegate.swift */,
+				E56156FC1C72E5BD0085AF38 /* ViewController.swift */,
+				E56156FE1C72E5BD0085AF38 /* Main.storyboard */,
+				E56157011C72E5BD0085AF38 /* Assets.xcassets */,
+				E56157031C72E5BD0085AF38 /* LaunchScreen.storyboard */,
+				E56157061C72E5BD0085AF38 /* Info.plist */,
 			);
-			path = MoneyConverter;
+			path = PlanA_3;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E56156B31C71944B0085AF38 /* MoneyConverter */ = {
+		E56156F61C72E5BD0085AF38 /* PlanA_3 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E56156C61C71944B0085AF38 /* Build configuration list for PBXNativeTarget "MoneyConverter" */;
+			buildConfigurationList = E56157091C72E5BD0085AF38 /* Build configuration list for PBXNativeTarget "PlanA_3" */;
 			buildPhases = (
-				E56156B01C71944B0085AF38 /* Sources */,
-				E56156B11C71944B0085AF38 /* Frameworks */,
-				E56156B21C71944B0085AF38 /* Resources */,
+				E56156F31C72E5BD0085AF38 /* Sources */,
+				E56156F41C72E5BD0085AF38 /* Frameworks */,
+				E56156F51C72E5BD0085AF38 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MoneyConverter;
-			productName = MoneyConverter;
-			productReference = E56156B41C71944B0085AF38 /* MoneyConverter.app */;
+			name = PlanA_3;
+			productName = PlanA_3;
+			productReference = E56156F71C72E5BD0085AF38 /* PlanA_3.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		E56156AC1C71944B0085AF38 /* Project object */ = {
+		E56156EF1C72E5BD0085AF38 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = KoreaUniversity;
 				TargetAttributes = {
-					E56156B31C71944B0085AF38 = {
+					E56156F61C72E5BD0085AF38 = {
 						CreatedOnToolsVersion = 7.2;
 					};
 				};
 			};
-			buildConfigurationList = E56156AF1C71944B0085AF38 /* Build configuration list for PBXProject "MoneyConverter" */;
+			buildConfigurationList = E56156F21C72E5BD0085AF38 /* Build configuration list for PBXProject "PlanA_3" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -113,56 +107,54 @@
 				en,
 				Base,
 			);
-			mainGroup = E56156AB1C71944B0085AF38;
-			productRefGroup = E56156B51C71944B0085AF38 /* Products */;
+			mainGroup = E56156EE1C72E5BD0085AF38;
+			productRefGroup = E56156F81C72E5BD0085AF38 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E56156B31C71944B0085AF38 /* MoneyConverter */,
+				E56156F61C72E5BD0085AF38 /* PlanA_3 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E56156B21C71944B0085AF38 /* Resources */ = {
+		E56156F51C72E5BD0085AF38 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E56156C21C71944B0085AF38 /* LaunchScreen.storyboard in Resources */,
-				E56156BF1C71944B0085AF38 /* Assets.xcassets in Resources */,
-				E56156BD1C71944B0085AF38 /* Main.storyboard in Resources */,
+				E56157051C72E5BD0085AF38 /* LaunchScreen.storyboard in Resources */,
+				E56157021C72E5BD0085AF38 /* Assets.xcassets in Resources */,
+				E56157001C72E5BD0085AF38 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E56156B01C71944B0085AF38 /* Sources */ = {
+		E56156F31C72E5BD0085AF38 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E56156E81C72BDF00085AF38 /* Money.swift in Sources */,
-				E56156BA1C71944B0085AF38 /* ViewController.swift in Sources */,
-				E56156B81C71944B0085AF38 /* AppDelegate.swift in Sources */,
-				E561570D1C75867D0085AF38 /* MoneyListViewController.swift in Sources */,
+				E56156FD1C72E5BD0085AF38 /* ViewController.swift in Sources */,
+				E56156FB1C72E5BD0085AF38 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E56156BB1C71944B0085AF38 /* Main.storyboard */ = {
+		E56156FE1C72E5BD0085AF38 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E56156BC1C71944B0085AF38 /* Base */,
+				E56156FF1C72E5BD0085AF38 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		E56156C01C71944B0085AF38 /* LaunchScreen.storyboard */ = {
+		E56157031C72E5BD0085AF38 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E56156C11C71944B0085AF38 /* Base */,
+				E56157041C72E5BD0085AF38 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -170,7 +162,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		E56156C41C71944B0085AF38 /* Debug */ = {
+		E56157071C72E5BD0085AF38 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -215,7 +207,7 @@
 			};
 			name = Debug;
 		};
-		E56156C51C71944B0085AF38 /* Release */ = {
+		E56157081C72E5BD0085AF38 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -253,24 +245,24 @@
 			};
 			name = Release;
 		};
-		E56156C71C71944B0085AF38 /* Debug */ = {
+		E561570A1C72E5BD0085AF38 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = MoneyConverter/Info.plist;
+				INFOPLIST_FILE = PlanA_3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.korea.MoneyConverter;
+				PRODUCT_BUNDLE_IDENTIFIER = "kr.ac.korea.PlanA-3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		E56156C81C71944B0085AF38 /* Release */ = {
+		E561570B1C72E5BD0085AF38 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = MoneyConverter/Info.plist;
+				INFOPLIST_FILE = PlanA_3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.korea.MoneyConverter;
+				PRODUCT_BUNDLE_IDENTIFIER = "kr.ac.korea.PlanA-3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -278,24 +270,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E56156AF1C71944B0085AF38 /* Build configuration list for PBXProject "MoneyConverter" */ = {
+		E56156F21C72E5BD0085AF38 /* Build configuration list for PBXProject "PlanA_3" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E56156C41C71944B0085AF38 /* Debug */,
-				E56156C51C71944B0085AF38 /* Release */,
+				E56157071C72E5BD0085AF38 /* Debug */,
+				E56157081C72E5BD0085AF38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E56156C61C71944B0085AF38 /* Build configuration list for PBXNativeTarget "MoneyConverter" */ = {
+		E56157091C72E5BD0085AF38 /* Build configuration list for PBXNativeTarget "PlanA_3" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E56156C71C71944B0085AF38 /* Debug */,
-				E56156C81C71944B0085AF38 /* Release */,
+				E561570A1C72E5BD0085AF38 /* Debug */,
+				E561570B1C72E5BD0085AF38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = E56156AC1C71944B0085AF38 /* Project object */;
+	rootObject = E56156EF1C72E5BD0085AF38 /* Project object */;
 }

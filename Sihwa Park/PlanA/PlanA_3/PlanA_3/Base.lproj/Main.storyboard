@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PlanA_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2iM-HP-uRc">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                            <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z9a-ZR-U2T">
+                                <rect key="frame" x="40" y="48" width="540" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="PFX-6t-m9L"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2iM-HP-uRc" secondAttribute="trailing" id="7jL-kd-WzM"/>
+                            <constraint firstItem="2iM-HP-uRc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Bp0-LV-MPh"/>
+                            <constraint firstItem="Z9a-ZR-U2T" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="27" id="D45-uR-LBf"/>
+                            <constraint firstItem="Z9a-ZR-U2T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="Gt3-K9-pVY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2iM-HP-uRc" secondAttribute="bottom" id="I4V-yH-VPN"/>
+                            <constraint firstItem="Z9a-ZR-U2T" firstAttribute="top" secondItem="2iM-HP-uRc" secondAttribute="top" id="L1b-CR-C02"/>
+                            <constraint firstItem="Z9a-ZR-U2T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MeY-Gl-tVM"/>
+                            <constraint firstAttribute="trailing" secondItem="Z9a-ZR-U2T" secondAttribute="trailing" constant="20" id="NYW-yP-e2R"/>
+                            <constraint firstItem="2iM-HP-uRc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Tt2-Zc-Hwr"/>
+                            <constraint firstItem="Z9a-ZR-U2T" firstAttribute="bottom" secondItem="2iM-HP-uRc" secondAttribute="bottom" id="ZFy-ed-iLw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Z9a-ZR-U2T" secondAttribute="trailing" constant="10" id="ZPI-7g-xCt"/>
+                            <constraint firstItem="Z9a-ZR-U2T" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="27" id="a1D-KE-dw3"/>
+                            <constraint firstItem="Z9a-ZR-U2T" firstAttribute="leading" secondItem="2iM-HP-uRc" secondAttribute="trailing" constant="-560" id="azi-h0-Ohu"/>
+                            <constraint firstItem="Z9a-ZR-U2T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="10" id="eB0-1J-wXg"/>
+                            <constraint firstItem="Z9a-ZR-U2T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="k9v-T2-bam"/>
+                            <constraint firstAttribute="width" secondItem="Z9a-ZR-U2T" secondAttribute="width" multiplier="0.9" id="yJn-SZ-VF2"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Gt3-K9-pVY"/>
+                                <exclude reference="L1b-CR-C02"/>
+                                <exclude reference="NYW-yP-e2R"/>
+                                <exclude reference="ZFy-ed-iLw"/>
+                                <exclude reference="a1D-KE-dw3"/>
+                                <exclude reference="azi-h0-Ohu"/>
+                                <exclude reference="eB0-1J-wXg"/>
+                                <exclude reference="yJn-SZ-VF2"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="InitialMapView" destination="2iM-HP-uRc" id="hPl-q1-LnS"/>
+                        <outlet property="SearchBar" destination="Z9a-ZR-U2T" id="f8V-qH-Ofe"/>
+                        <outlet property="searchDisplayController" destination="fjx-U7-3WE" id="bPW-nd-mQw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="fjx-U7-3WE">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="RrY-0k-aMp"/>
+                        <outlet property="searchBar" destination="Z9a-ZR-U2T" id="Alo-UT-omX"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="hfd-in-YZ2"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="en1-JG-N9O"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="NAN-Xw-iPs"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="305" y="418"/>
+        </scene>
+    </scenes>
+</document>
