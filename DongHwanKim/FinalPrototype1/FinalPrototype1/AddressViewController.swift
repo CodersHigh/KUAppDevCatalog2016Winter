@@ -12,7 +12,7 @@ class AddressViewController:UITableViewController, InsertViewControllerDelegate 
     // ViewController-Scene LifeCycle
 
     var AddressList:Array<OneLineAddress> = []
-    var dataController = DataController()
+    var networkController = NetworkManager.sharedManager
     var row:Int = 0;
     
     func addressInsert(newAddress:OneLineAddress) ->() {
@@ -22,9 +22,12 @@ class AddressViewController:UITableViewController, InsertViewControllerDelegate 
     func fetchAndUpdate(completionHandler: (() -> Void)!) {
         
         AddressList.map({ (oneLineAddress) in
-        dataController.fetchTags(oneLineAddress) { (error, newPocket) in
-            self.dataController.updateData(oneLineAddress, newPocket: newPocket)
-        }
+        let newPocket:Set<String> = networkController.fetchTags(oneLineAddress){}
+        self.networkController.updateData(oneLineAddress, newPocket: newPocket)
+        self.tableView.reloadData()
+          
+
+        
         
         })
     
@@ -32,21 +35,29 @@ class AddressViewController:UITableViewController, InsertViewControllerDelegate 
 
     
     @IBAction func InstantUpdate(sender: AnyObject) {
-        // self.fetchAndUpdate(){}
+        //self.fetchAndUpdate(){}
         self.tableView.reloadData()
 
     }
     
     
-    // View가 로드되었을 때 아이폰에 있는 아카이브로부터 AddressList를 읽어들어온다.
-    // 아카이브로부터 save/load는 나중에 구현
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-            }
+        // Do any additional setup after loading the view, typically from a nib.
+        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+
+    }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -100,7 +111,13 @@ class AddressViewController:UITableViewController, InsertViewControllerDelegate 
             let nav = segue.destinationViewController as! UINavigationController
             let add = nav.topViewController as! InsertViewController
             add.delegate = self
+
+        
+      
     }
+    
+ 
+
     
     // add delegate
     
@@ -115,5 +132,24 @@ class AddressViewController:UITableViewController, InsertViewControllerDelegate 
             self.tableView.reloadData()
     
     }
+    
+    
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        // Return false if you do not want the specified item to be editable.
+        return true
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            AddressList.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        } else if editingStyle == .Insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+        }
+        self.tableView.reloadData()
+    }
+    
+
+    
     
 }

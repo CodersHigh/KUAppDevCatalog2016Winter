@@ -15,7 +15,6 @@ typealias Time = (h:Int, m:Int)
     // user에게 input을 받아 초기화
     var url:String!
     var searchKeyword:String!
-    var updatePeriod:Time!
 
     // http response로부터 값을 받아 초기화
     var titlePocket:Set<String> = []
@@ -32,10 +31,7 @@ typealias Time = (h:Int, m:Int)
         self.searchKeyword = searchKeyWord
     }
 
-    convenience init(url:String, searchKeyWord:String, updatePeriod:Time) {
-        self.init(url: url, searchKeyWord: searchKeyWord)
-        self.updatePeriod = updatePeriod
-    }
+
     
     func instantUpdate(newPocket:Set<String>) {
         if self.userChecked {

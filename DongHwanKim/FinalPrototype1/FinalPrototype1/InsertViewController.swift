@@ -8,12 +8,7 @@
 
 import UIKit
 
-/*
-typealias time = (h:Int, m:Int)
-var inputUrl:String?
-var inputKeyword:String?
-var inputPeriod:time?
-*/
+
 
 class InsertViewController:UITableViewController {
     
@@ -47,31 +42,23 @@ class InsertViewController:UITableViewController {
     }
 
     @IBAction func cancel(sender: AnyObject) {
-        // hide keyboard
         self.inputUrl.resignFirstResponder()
         self.inputKeyword.resignFirstResponder()
-        self.hour.resignFirstResponder()
-        self.minute.resignFirstResponder()
+
         
-        // notify delegate of cancellation
         self.delegate!.InsertViewControllerDidCancel(self)
     }
     
     @IBAction func done(sender: AnyObject) {
-        // hide keyboard
         self.inputUrl.resignFirstResponder()
         self.inputKeyword.resignFirstResponder()
-        self.hour.resignFirstResponder()
-        self.minute.resignFirstResponder()
+ 
         
         guard let url = inputUrl.text, searchKeyword = inputKeyword.text
-        //, stringHour = hour.text, stringMinute = minute.text, hour = Int(stringHour), minute = Int(stringMinute)
             else {
                 return
         }
-        let newAddress = OneLineAddress(url: url, searchKeyWord: searchKeyword)//, updatePeriod: (hour, minute))
-        
-        // notify delegate of finish
+        let newAddress = OneLineAddress(url: url, searchKeyWord: searchKeyword)
         self.delegate!.InsertViewControllerDidFinish(self, data: newAddress)
     
         }

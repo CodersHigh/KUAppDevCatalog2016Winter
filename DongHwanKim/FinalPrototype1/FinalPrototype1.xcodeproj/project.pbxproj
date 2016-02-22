@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D16C688E1C7AA70F007CAFBB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16C688D1C7AA70F007CAFBB /* NetworkManager.swift */; };
 		D19863B21C77C2D2006E72DF /* InsertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19863B11C77C2D2006E72DF /* InsertViewController.swift */; };
 		D1CBDA641C78310B008D827A /* InsertViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CBDA631C78310B008D827A /* InsertViewControllerDelegate.swift */; };
 		D1DEC37A1C73FEF200E54ACD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DEC3791C73FEF200E54ACD /* AppDelegate.swift */; };
@@ -15,7 +16,6 @@
 		D1DEC3811C73FEF200E54ACD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1DEC3801C73FEF200E54ACD /* Assets.xcassets */; };
 		D1DEC3841C73FEF200E54ACD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1DEC3821C73FEF200E54ACD /* LaunchScreen.storyboard */; };
 		D1DEC3921C7562C700E54ACD /* OneLineAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DEC3911C7562C700E54ACD /* OneLineAddress.swift */; };
-		D1DEC3981C75684400E54ACD /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DEC3971C75684400E54ACD /* DataController.swift */; };
 		D1DEC39A1C75692A00E54ACD /* HTMLReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1DEC3991C75692A00E54ACD /* HTMLReader.framework */; };
 		D1DEC39D1C75778B00E54ACD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1DEC39B1C75778B00E54ACD /* Alamofire.framework */; };
 		D1DEC39E1C75778B00E54ACD /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1DEC39C1C75778B00E54ACD /* SwiftyJSON.framework */; };
@@ -28,9 +28,10 @@
 		28917D0489DAE3A3949C0133 /* Pods-FinalPrototype1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalPrototype1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinalPrototype1/Pods-FinalPrototype1.debug.xcconfig"; sourceTree = "<group>"; };
 		3CFA17DB20F187839EF86995 /* Pods_FinalPrototype1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalPrototype1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D12C98141C7980DB0029A22D /* FinalPrototype1-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FinalPrototype1-Bridging-Header.h"; sourceTree = "<group>"; };
+		D16C688D1C7AA70F007CAFBB /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		D19863B11C77C2D2006E72DF /* InsertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertViewController.swift; sourceTree = "<group>"; };
 		D1CBDA631C78310B008D827A /* InsertViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertViewControllerDelegate.swift; sourceTree = "<group>"; };
-		D1DEC3761C73FEF200E54ACD /* FinalPrototype1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalPrototype1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1DEC3761C73FEF200E54ACD /* MultipleRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultipleRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1DEC3791C73FEF200E54ACD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1DEC37B1C73FEF200E54ACD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D1DEC37E1C73FEF200E54ACD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -38,7 +39,6 @@
 		D1DEC3831C73FEF200E54ACD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1DEC3851C73FEF200E54ACD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1DEC3911C7562C700E54ACD /* OneLineAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneLineAddress.swift; sourceTree = "<group>"; };
-		D1DEC3971C75684400E54ACD /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		D1DEC3991C75692A00E54ACD /* HTMLReader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HTMLReader.framework; path = "Pods/../build/Debug-iphoneos/HTMLReader.framework"; sourceTree = "<group>"; };
 		D1DEC39B1C75778B00E54ACD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		D1DEC39C1C75778B00E54ACD /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 		D1DEC3771C73FEF200E54ACD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D1DEC3761C73FEF200E54ACD /* FinalPrototype1.app */,
+				D1DEC3761C73FEF200E54ACD /* MultipleRefresh.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,7 +109,7 @@
 				D1E055661C76BABA0079586E /* AddressViewController.swift */,
 				D19863B11C77C2D2006E72DF /* InsertViewController.swift */,
 				D1DEC3911C7562C700E54ACD /* OneLineAddress.swift */,
-				D1DEC3971C75684400E54ACD /* DataController.swift */,
+				D16C688D1C7AA70F007CAFBB /* NetworkManager.swift */,
 				D1DEC3801C73FEF200E54ACD /* Assets.xcassets */,
 				D1DEC3821C73FEF200E54ACD /* LaunchScreen.storyboard */,
 				D1DEC3851C73FEF200E54ACD /* Info.plist */,
@@ -120,9 +120,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D1DEC3751C73FEF200E54ACD /* FinalPrototype1 */ = {
+		D1DEC3751C73FEF200E54ACD /* MultipleRefresh */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D1DEC3881C73FEF200E54ACD /* Build configuration list for PBXNativeTarget "FinalPrototype1" */;
+			buildConfigurationList = D1DEC3881C73FEF200E54ACD /* Build configuration list for PBXNativeTarget "MultipleRefresh" */;
 			buildPhases = (
 				B07CFD3B4AA95DCFB2DE59E0 /* Check Pods Manifest.lock */,
 				D1DEC3721C73FEF200E54ACD /* Sources */,
@@ -135,9 +135,9 @@
 			);
 			dependencies = (
 			);
-			name = FinalPrototype1;
+			name = MultipleRefresh;
 			productName = FinalPrototype1;
-			productReference = D1DEC3761C73FEF200E54ACD /* FinalPrototype1.app */;
+			productReference = D1DEC3761C73FEF200E54ACD /* MultipleRefresh.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -174,7 +174,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D1DEC3751C73FEF200E54ACD /* FinalPrototype1 */,
+				D1DEC3751C73FEF200E54ACD /* MultipleRefresh */,
 			);
 		};
 /* End PBXProject section */
@@ -246,9 +246,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1DEC37C1C73FEF200E54ACD /* ViewController.swift in Sources */,
-				D1DEC3981C75684400E54ACD /* DataController.swift in Sources */,
 				D1E055671C76BABA0079586E /* AddressViewController.swift in Sources */,
 				D1CBDA641C78310B008D827A /* InsertViewControllerDelegate.swift in Sources */,
+				D16C688E1C7AA70F007CAFBB /* NetworkManager.swift in Sources */,
 				D1DEC37A1C73FEF200E54ACD /* AppDelegate.swift in Sources */,
 				D1DEC3921C7562C700E54ACD /* OneLineAddress.swift in Sources */,
 				D19863B21C77C2D2006E72DF /* InsertViewController.swift in Sources */,
@@ -294,6 +294,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -339,6 +340,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -366,6 +368,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
@@ -373,7 +377,8 @@
 				INFOPLIST_FILE = FinalPrototype1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.trasient.FinalPrototype1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MultipleRefresh;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "FinalPrototype1-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -385,6 +390,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
@@ -392,7 +399,8 @@
 				INFOPLIST_FILE = FinalPrototype1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.trasient.FinalPrototype1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MultipleRefresh;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "FinalPrototype1-Bridging-Header.h";
 			};
 			name = Release;
@@ -409,7 +417,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D1DEC3881C73FEF200E54ACD /* Build configuration list for PBXNativeTarget "FinalPrototype1" */ = {
+		D1DEC3881C73FEF200E54ACD /* Build configuration list for PBXNativeTarget "MultipleRefresh" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D1DEC3891C73FEF200E54ACD /* Debug */,

@@ -18,24 +18,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIApplication.sharedApplication().setMinimumBackgroundFetchInterval(
             UIApplicationBackgroundFetchIntervalMinimum)
+
         
         return true
     }
     
-    func application(application: UIApplication, completionHandler: (UIBackgroundFetchResult) -> Void) {
-   
-
-        if let nav = window?.rootViewController as? UINavigationController {
-            if let avcs = nav.viewControllers[0] as? AddressViewController {
-                    avcs.fetchAndUpdate() {
-                    completionHandler(.NewData)
-                    print("Background Fetch Complete")
-                    }
-                }
-            } else {
-                completionHandler(.Failed)
+    func application(application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: () -> Void) {
+        
+        NetworkManager.sharedManager.backgroundCompletionHandler = completionHandler
+/*
+        if let navVC = window?.rootViewController as? UINavigationController{
+            if let topVC = navVC.topViewController as? AddressViewController{
+                topVC.fetchAndUpdate({
+                    completionHandler()
+                })
             }
-    
+        }
+*/
     }
     
     
