@@ -34,18 +34,24 @@ class NetworkManager {
         }
     }
 
-    func fetchTags(address:OneLineAddress, completionHandler: () -> Void) -> Set<String> {
+    func fetchTags(address:OneLineAddress, completionHandler: (NSError?, newPocket:Set<Pocket>) -> Void) {
         
-        var newPocket:Set<String> = []
+        var newPocket:Set<Pocket> = []
         
         guard let targetAddress:OneLineAddress = address else {
-            return newPocket
+            return
         }
+        guard let host = NSURL(string: targetAddress.url)!.host else {
+            return
+        }
+
+        let makeUrl:String = "http://" + host + "/"
         
-        NetworkManager.sharedManager.backgroundManager.startRequestsImmediately = true
         NetworkManager.sharedManager.backgroundManager.request(NSURLRequest(URL: NSURL(string: targetAddress.url)!)).responseString {
+            // Alamofire.request(.GET, targetAddress.url).responseString {
             responseString in
             guard responseString.result.error == nil else {
+                completionHandler(responseString.result.error!, newPocket: [])
                 NSLog("%@", responseString.result.error!)
                 return
                 
@@ -53,6 +59,7 @@ class NetworkManager {
             guard let htmlAsString = responseString.result.value else {
                 let error = Error.errorWithCode(.StringSerializationFailed, failureReason: "Could not get HTML as String")
                 NSLog("%@", error)
+                completionHandler(error, newPocket: [])
                 return
             }
             
@@ -63,25 +70,22 @@ class NetworkManager {
             for row in anchors {
                 if let anchorElement = row as? HTMLElement {
                     if self.isAnchor(anchorElement) {
-                        
-                        if  let title = self.matchKeyword(anchorElement, address: targetAddress) {
-                            newPocket.insert(title)
+                        if  let title = self.matchKeyword(anchorElement, address: targetAddress), var url = anchorElement.objectForKeyedSubscript("href") as? String {
+                            if !url.containsString("http") {
+                                url = makeUrl + url
+                            }
+                            newPocket.insert(Pocket(title: title, url: url))
+                                
                         }
-                        
                     }
                 }
             }
-            
-            
-            
+            completionHandler(nil, newPocket: newPocket)
         }
-            completionHandler()
-            return newPocket
-        
     }
     
     
-    func updateData(targetAddress:OneLineAddress, newPocket:Set<String>) {
+    func updateData(targetAddress:OneLineAddress, newPocket:Set<Pocket>) {
         targetAddress.instantUpdate(newPocket)
     }
     

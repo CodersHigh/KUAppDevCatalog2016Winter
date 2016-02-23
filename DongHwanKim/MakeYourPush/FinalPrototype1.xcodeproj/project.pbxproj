@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D16C688E1C7AA70F007CAFBB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16C688D1C7AA70F007CAFBB /* NetworkManager.swift */; };
+		D184C3941C7BEF0400290FA8 /* Pocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D184C3931C7BEF0400290FA8 /* Pocket.swift */; };
+		D184C3961C7BF7C600290FA8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D184C3951C7BF7C600290FA8 /* DetailViewController.swift */; };
 		D19863B21C77C2D2006E72DF /* InsertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19863B11C77C2D2006E72DF /* InsertViewController.swift */; };
 		D1CBDA641C78310B008D827A /* InsertViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CBDA631C78310B008D827A /* InsertViewControllerDelegate.swift */; };
 		D1DEC37A1C73FEF200E54ACD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DEC3791C73FEF200E54ACD /* AppDelegate.swift */; };
@@ -29,6 +31,8 @@
 		3CFA17DB20F187839EF86995 /* Pods_FinalPrototype1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalPrototype1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D12C98141C7980DB0029A22D /* FinalPrototype1-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FinalPrototype1-Bridging-Header.h"; sourceTree = "<group>"; };
 		D16C688D1C7AA70F007CAFBB /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D184C3931C7BEF0400290FA8 /* Pocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pocket.swift; sourceTree = "<group>"; };
+		D184C3951C7BF7C600290FA8 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D19863B11C77C2D2006E72DF /* InsertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertViewController.swift; sourceTree = "<group>"; };
 		D1CBDA631C78310B008D827A /* InsertViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertViewControllerDelegate.swift; sourceTree = "<group>"; };
 		D1DEC3761C73FEF200E54ACD /* MultipleRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultipleRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,7 +112,9 @@
 				D1DEC37D1C73FEF200E54ACD /* Main.storyboard */,
 				D1E055661C76BABA0079586E /* AddressViewController.swift */,
 				D19863B11C77C2D2006E72DF /* InsertViewController.swift */,
+				D184C3951C7BF7C600290FA8 /* DetailViewController.swift */,
 				D1DEC3911C7562C700E54ACD /* OneLineAddress.swift */,
+				D184C3931C7BEF0400290FA8 /* Pocket.swift */,
 				D16C688D1C7AA70F007CAFBB /* NetworkManager.swift */,
 				D1DEC3801C73FEF200E54ACD /* Assets.xcassets */,
 				D1DEC3821C73FEF200E54ACD /* LaunchScreen.storyboard */,
@@ -245,11 +251,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D184C3961C7BF7C600290FA8 /* DetailViewController.swift in Sources */,
 				D1DEC37C1C73FEF200E54ACD /* ViewController.swift in Sources */,
 				D1E055671C76BABA0079586E /* AddressViewController.swift in Sources */,
 				D1CBDA641C78310B008D827A /* InsertViewControllerDelegate.swift in Sources */,
 				D16C688E1C7AA70F007CAFBB /* NetworkManager.swift in Sources */,
 				D1DEC37A1C73FEF200E54ACD /* AppDelegate.swift in Sources */,
+				D184C3941C7BEF0400290FA8 /* Pocket.swift in Sources */,
 				D1DEC3921C7562C700E54ACD /* OneLineAddress.swift in Sources */,
 				D19863B21C77C2D2006E72DF /* InsertViewController.swift in Sources */,
 			);

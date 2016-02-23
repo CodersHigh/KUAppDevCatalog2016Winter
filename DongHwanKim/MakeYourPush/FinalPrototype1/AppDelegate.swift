@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import HTMLReader
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil))
+        
         UIApplication.sharedApplication().setMinimumBackgroundFetchInterval(
             UIApplicationBackgroundFetchIntervalMinimum)
 
@@ -23,19 +27,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    func application(application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: () -> Void) {
-        
-        NetworkManager.sharedManager.backgroundCompletionHandler = completionHandler
-/*
+   func application(application: UIApplication, performFetchWithCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+  
         if let navVC = window?.rootViewController as? UINavigationController{
-            if let topVC = navVC.topViewController as? AddressViewController{
-                topVC.fetchAndUpdate({
-                    completionHandler()
-                })
-            }
+        if let topVC = navVC.topViewController as? AddressViewController{
+        topVC.fetchAndUpdate({
+            print("fetch OK")
+        completionHandler(.NewData)
+        })
+        } else {
+            completionHandler(.Failed)
+            print("fetch failed")
         }
-*/
+        
+        }
     }
+    
+  
     
     
     func applicationWillResignActive(application: UIApplication) {

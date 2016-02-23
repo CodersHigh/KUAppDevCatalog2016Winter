@@ -12,8 +12,12 @@ class AddressViewController:UITableViewController, InsertViewControllerDelegate 
     // ViewController-Scene LifeCycle
 
     var AddressList:Array<OneLineAddress> = []
+
+    
     var networkController = NetworkManager.sharedManager
     var row:Int = 0;
+    var detailItems:Array<Pocket> = []
+    
     
     func addressInsert(newAddress:OneLineAddress) ->() {
         AddressList.append(newAddress)
@@ -22,20 +26,20 @@ class AddressViewController:UITableViewController, InsertViewControllerDelegate 
     func fetchAndUpdate(completionHandler: (() -> Void)!) {
         
         AddressList.map({ (oneLineAddress) in
-        let newPocket:Set<String> = networkController.fetchTags(oneLineAddress){}
-        self.networkController.updateData(oneLineAddress, newPocket: newPocket)
-        self.tableView.reloadData()
-          
+            networkController.fetchTags(oneLineAddress) { (error, newPocket) in
+                self.networkController.updateData(oneLineAddress, newPocket: newPocket)
+                self.tableView.reloadData()
+                completionHandler()
 
-        
-        
+            }
         })
-    
+        
     }
-
+    
+    
     
     @IBAction func InstantUpdate(sender: AnyObject) {
-        //self.fetchAndUpdate(){}
+        self.fetchAndUpdate(){}
         self.tableView.reloadData()
 
     }
@@ -45,6 +49,7 @@ class AddressViewController:UITableViewController, InsertViewControllerDelegate 
     
     
     override func viewDidLoad() {
+        //tableView.registerClass(CustomCell.self, forCellReuseIdentifier:"Cell")
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
@@ -82,38 +87,70 @@ class AddressViewController:UITableViewController, InsertViewControllerDelegate 
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath:indexPath)
+
+        let identifier:String = "AddressCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath:indexPath)
         //print("indexPath = section:\(indexPath.section) row:\(indexPath.row)")
         
         if let addressKeyword = AddressList[indexPath.row].searchKeyword {
-            cell.textLabel?.text = addressKeyword
+            if let keywordlabel = (cell as! CustomCell).keyword {
+                keywordlabel.text = addressKeyword
+            }
+        }
+        if let updatetime = AddressList[indexPath.row].latestUpdatedTime {
+            if let timelabel = (cell as! CustomCell).updatetime {
+                timelabel.text = updatetime
+            }
         }
         
-        
-        if let addressUpdateNumber = AddressList[indexPath.row].updatedNumber {
-            cell.detailTextLabel!.text = String(addressUpdateNumber)
+        if let updatednumber:Int = AddressList[indexPath.row].updatedNumber {
+            if let numberlabel = (cell as! CustomCell).updatenumber {
+                numberlabel.text = String(updatednumber)
+            }
+            
         }
+        
+        //if let addressUpdateNumber = AddressList[indexPath.row].updatedNumber {
+        // cell.detailTextLabel!.text = String(AddressList[indexPath.row].updatedNumber)
+        //}
         
         return cell;
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        // let indexPath = tableView.indexPathForSelectedRow!
+        // let currentCell = tableView.cellForRowAtIndexPath(indexPath)! as UITableViewCell
+        
         AddressList[indexPath.row].updatedNumber = 0
         AddressList[indexPath.row].userChecked = true
-        if let url = NSURL(string: AddressList[indexPath.row].url) {
+        // detailItems = Array(AddressList[indexPath.row].titlePocket)
+        //performSegueWithIdentifier("detail", sender: self)
+
+        
+      /*  if let url = NSURL(string: AddressList[indexPath.row].url) {
             UIApplication.sharedApplication().openURL(url)
-        }
+        }*/
     }
+    
+    
 
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "insert" {
             let nav = segue.destinationViewController as! UINavigationController
             let add = nav.topViewController as! InsertViewController
             add.delegate = self
-
-        
-      
+        }
+        if segue.identifier == "detail" {
+            
+            let index = self.tableView.indexPathForSelectedRow!
+            let detail = segue.destinationViewController as! DetailViewController
+            
+            detailItems = Array(AddressList[index.row].titlePocket)
+            detail.ItemList = detailItems
+            
+        }
     }
     
  
@@ -149,7 +186,13 @@ class AddressViewController:UITableViewController, InsertViewControllerDelegate 
         self.tableView.reloadData()
     }
     
+}
+
+class CustomCell:UITableViewCell {
+    @IBOutlet weak var keyword: UILabel!
+    @IBOutlet weak var updatetime: UILabel!
+    @IBOutlet weak var updatenumber: UILabel!
 
     
-    
 }
+

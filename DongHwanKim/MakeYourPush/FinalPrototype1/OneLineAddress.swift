@@ -6,7 +6,7 @@
 //  Copyright © 2016년 KimDongHawn. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 typealias Time = (h:Int, m:Int)
 
@@ -17,14 +17,14 @@ typealias Time = (h:Int, m:Int)
     var searchKeyword:String!
 
     // http response로부터 값을 받아 초기화
-    var titlePocket:Set<String> = []
+    var titlePocket:Set<Pocket> = []
     
     // update시 초기화
-    var updatedNumber:Int?
+    var updatedNumber:Int = 0
     var presentFilteredKeywordNumber:Int?
     var userChecked:Bool = true
     
-    var latestUpdatedTime:Time?
+    var latestUpdatedTime:String?
     
     init(url:String, searchKeyWord:String) {
         self.url = url
@@ -33,13 +33,32 @@ typealias Time = (h:Int, m:Int)
 
 
     
-    func instantUpdate(newPocket:Set<String>) {
+    func instantUpdate(newPocket:Set<Pocket>) {
         if self.userChecked {
             self.presentFilteredKeywordNumber = newPocket.count
             self.updatedNumber = newPocket.subtract(self.titlePocket).count
             self.titlePocket = self.titlePocket.union(newPocket)
             self.userChecked = false
         }
+        
+        if self.updatedNumber != 0 {
+            let notification = UILocalNotification()
+            notification.alertBody = "\(self.searchKeyword) has new \(self.updatedNumber) items updated"
+            notification.alertAction = "open"
+            notification.soundName = UILocalNotificationDefaultSoundName
+            notification.userInfo = ["Keyword": self.searchKeyword, ]
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+            
+            let now = NSDate()
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.locale = NSLocale(localeIdentifier: "ko_KR")
+            dateFormatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
+            self.latestUpdatedTime = dateFormatter.stringFromDate(now)
+            
+            
+            // print(dateFormatter.stringFromDate(now))
+        }
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
