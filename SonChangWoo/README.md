@@ -19,3 +19,9 @@
 3. 설정탭 : 로그인 + 탭 순서 결정 + 알람설정
 4. 추가기능 : 단어 설정시 해당 단어 글 등록시 알람
 
+### App ScreenShot
+<img src = "https://raw.githubusercontent.com/kor45cw/KUAppDevCatalog2016Winter/master/SonChangWoo/ScreenShot/스크린샷%202016-02-23%2023.08.17.png" height="250">
+<img src = "https://raw.githubusercontent.com/kor45cw/KUAppDevCatalog2016Winter/master/SonChangWoo/ScreenShot/스크린샷%202016-02-24%2000.24.15.png" height = "250">
+<img src = "https://raw.githubusercontent.com/kor45cw/KUAppDevCatalog2016Winter/master/SonChangWoo/ScreenShot/스크린샷%202016-02-24%2000.24.37.png" height = "250">
+
+### App testVideo
