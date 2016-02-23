@@ -51,6 +51,9 @@ class AddressViewController:UITableViewController, InsertViewControllerDelegate 
     override func viewDidLoad() {
         //tableView.registerClass(CustomCell.self, forCellReuseIdentifier:"Cell")
         super.viewDidLoad()
+        if let savedAddressList = loadAddressList() {
+            AddressList += savedAddressList
+        }
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
 
@@ -132,8 +135,6 @@ class AddressViewController:UITableViewController, InsertViewControllerDelegate 
             UIApplication.sharedApplication().openURL(url)
         }*/
     }
-    
-    
 
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -166,6 +167,7 @@ class AddressViewController:UITableViewController, InsertViewControllerDelegate 
         
             self.dismissViewControllerAnimated(true, completion: nil)
             self.addressInsert(data)
+            saveAddressList()
             self.tableView.reloadData()
     
     }
@@ -176,15 +178,30 @@ class AddressViewController:UITableViewController, InsertViewControllerDelegate 
         return true
     }
     
+    
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             AddressList.removeAtIndex(indexPath.row)
+            saveAddressList()
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
         self.tableView.reloadData()
     }
+    
+    func saveAddressList() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(AddressList, toFile: OneLineAddress.ArchiveURL.path!)
+        if !isSuccessfulSave {
+            print("Failed to address list...")
+        }
+    }
+    
+    func loadAddressList() -> [OneLineAddress]? {
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(OneLineAddress.ArchiveURL.path!) as? [OneLineAddress]
+    }
+    
+
     
 }
 

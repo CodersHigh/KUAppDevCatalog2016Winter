@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D1DEC3751C73FEF200E54ACD"
                BuildableName = "MultipleRefresh.app"
-               BlueprintName = "MultipleRefresh"
-               ReferencedContainer = "container:FinalPrototype1.xcodeproj">
+               BlueprintName = "MakeYourPush"
+               ReferencedContainer = "container:MakeYourPush.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D1DEC3751C73FEF200E54ACD"
             BuildableName = "MultipleRefresh.app"
-            BlueprintName = "MultipleRefresh"
-            ReferencedContainer = "container:FinalPrototype1.xcodeproj">
+            BlueprintName = "MakeYourPush"
+            ReferencedContainer = "container:MakeYourPush.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,8 +58,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D1DEC3751C73FEF200E54ACD"
             BuildableName = "MultipleRefresh.app"
-            BlueprintName = "MultipleRefresh"
-            ReferencedContainer = "container:FinalPrototype1.xcodeproj">
+            BlueprintName = "MakeYourPush"
+            ReferencedContainer = "container:MakeYourPush.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,8 +77,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D1DEC3751C73FEF200E54ACD"
             BuildableName = "MultipleRefresh.app"
-            BlueprintName = "MultipleRefresh"
-            ReferencedContainer = "container:FinalPrototype1.xcodeproj">
+            BlueprintName = "MakeYourPush"
+            ReferencedContainer = "container:MakeYourPush.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
