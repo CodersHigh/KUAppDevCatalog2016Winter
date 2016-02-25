@@ -35,8 +35,19 @@
 
 
 ### Data Model
+<img src="https://github.com/astrayne/KUAppDevCatalog2016Winter/blob/master/Sihwa%20Park/image/DataModel_1.jpeg?raw=true" alt="Completry Screenshot" height="500" >
 
+<img src="https://github.com/astrayne/KUAppDevCatalog2016Winter/blob/master/Sihwa%20Park/image/DataModel_2.jpeg?raw=true" alt="Completry Screenshot" height="500" >
+
+### App Screenshot
+<img src="https://github.com/astrayne/KUAppDevCatalog2016Winter/blob/master/Sihwa%20Park/image/screenshot1.jpeg?raw=true" alt="Completry Screenshot" height="300" >
 
 ### App Video
 [![PlanA Prototype Video](http://img.youtube.com/vi/WvuEXIagBkc/0.jpg)](https://www.youtube.com/watch?v=WvuEXIagBkc)
 
+### 구현하지 못한 부분
+1. 선으로 연결하는 부분
+2. 검색 후 다음 목적지 추가 등으로 데이터에 접근하는 것
+3. 지도 추가 부분
+
+### 발표 자료에 자세한 내용이 더 있습니다
