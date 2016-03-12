@@ -9,4 +9,8 @@ MyGreateApp은 Teacher@Student입니다.
 대학생 25살 김모씨는 Teacher@Student로 과외학생과 학생 학부모와 커뮤니케이션을 한다. 학생은 수시로 과외 선생님을 통해 모르는 문제를 해결할 수 있고 학부모는 과외의 효과를 눈으로 확인할 수 있어 학생과 학부모 모두 과외에 대한 만족도가 상승했다. 김모씨는 과외를 지속할 수 있어 수입이 안정되었다. 
 
 ###Prototype Video
-<img src="https://raw.githubusercontent.com/muktop/Project26/master/스크린샷%202016-01-26%20오전%2010.37.18.png" alt="Completry Screenshot" height="250" > <img src="https://raw.githubusercontent.com/muktop/Project26/master/스크린샷%202016-01-26%20오전%2010.39.55.png" alt="Completry Screenshot" height="250" > <img src="https://raw.githubusercontent.com/muktop/Project26/master/스크린샷%202016-01-26%20오전%2010.40.34.png" alt="Completry Screenshot" height="250" >
+<img src="https://raw.githubusercontent.com/muktop/KUAppDevCatalog2016Winter/master/KimKyoungMin/김경민_대표스크린샷1.png" alt="Completry Screenshot" height="250" > <img src="https://raw.githubusercontent.com/muktop/KUAppDevCatalog2016Winter/master/KimKyoungMin/김경민_대표스크린샷2.png" alt="Completry Screenshot" height="250" > <img src="https://raw.githubusercontent.com/muktop/KUAppDevCatalog2016Winter/master/KimKyoungMin/김경민_대표스크린샷3.png" alt="Completry Screenshot" height="250" >
+
+###StoryBoard
+<img src="https://raw.githubusercontent.com/muktop/KUAppDevCatalog2016Winter/master/KimKyoungMin/김경민스토리보드.jpg" alt="Completry Screenshot" height="500" > 
+
